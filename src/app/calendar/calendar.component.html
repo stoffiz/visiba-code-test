@@ -11,13 +11,8 @@
       </div>
       <div class="card-body lead">
         <div class="days-grid d-flex justify-content-between justify-content-between">
-          <div *ngFor="let day of weekDays">
-            <span>{{day}}</span>
-          </div>
-        </div>
-        <div class="days-grid d-flex justify-content-between justify-content-between">
           <div *ngFor="let date of currentWeekDates">
-            <span>{{date.dayOfMonth}}</span>
+            <span>{{date.dayOfWeekShort}} {{date.dayOfMonth}}</span>
           </div>
         </div>
       </div>

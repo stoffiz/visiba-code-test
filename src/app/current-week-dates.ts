@@ -1,4 +1,6 @@
 export interface CurrentWeekDates {
   date: string;
-  dayOfMonth: number,
+  dayOfMonth: string,
+  dayOfWeekShort: string;
+  isToday: boolean;
 }

@@ -55,7 +55,9 @@ export class CalendarComponent implements OnInit {
     return [...Array(this.getNumberOfDaysInMonth(year, month))].map((day, index) => {
       return {
         date: dayjs(`${year}-${month}-${index + 1}`).format("YYYY-MM-DD"),
-        dayOfMonth: index + 1,
+        dayOfMonth: dayjs(`${year}-${month}-${index + 1}`).format("D"),
+        dayOfWeekShort: dayjs(`${year}-${month}-${index + 1}`).format("ddd"),
+        isToday: dayjs(`${year}-${month}-${index + 1}`).isToday(),
       };
     });
   }
